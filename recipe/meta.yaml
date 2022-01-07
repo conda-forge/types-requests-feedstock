@@ -1,5 +1,5 @@
 {% set name = "types-requests" %}
-{% set version = "2.27.1" %}
+{% set version = "2.27.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/types-requests-{{ version }}.tar.gz
-  sha256: 59ae7a60ed4b61ece7ff6f0ccff394e4d65a6df9b2970cfeb7a0015cb0c91b7e
+  sha256: c902c5433ad103053011c6ac036317ac6f6a8e8a6926fc470a8d2ef791236da7
 
 build:
   number: 0
