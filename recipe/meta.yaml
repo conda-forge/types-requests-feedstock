@@ -1,17 +1,15 @@
-{% set name = "types-requests" %}
 {% set version = "2.27.11" %}
 
-
 package:
-  name: {{ name|lower }}
+  name: types-requests
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/types-requests-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/t/types-requests/types-requests-{{ version }}.tar.gz
   sha256: 6a7ed24b21780af4a5b5e24c310b2cd885fb612df5fd95584d03d87e5f2a195a
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -21,11 +19,14 @@ requirements:
     - python >=3.6
   run:
     - python >=3.6
+    - types-urllib3 <1.27
 
 test:
+  requires:
+    - pip
   commands:
-    - test -f $SP_DIR/requests-stubs/__init__.pyi
-
+    - pip check
+    - test -f $SP_DIR/requests-stubs/__init__.pyi  # [unix]
 
 about:
   home: https://github.com/python/typeshed
