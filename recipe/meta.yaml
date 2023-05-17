@@ -11,12 +11,13 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - pip
     - python >=3.6
+    - wheel
   run:
     - python >=3.6
     - types-urllib3 <1.27
@@ -33,8 +34,15 @@ about:
   summary: Typing stubs for requests
   license: Apache-2.0 AND MIT
   license_file: LICENSE
+  license_family: Apache
+  description: This is a PEP 561 type stub package for the requests package.
+  dev_url: https://github.com/python/typeshed/tree/main/stubs/requests
+  doc_url: https://pypi.org/project/types-requests/
 
 extra:
   recipe-maintainers:
     - fhoehle
     - conda-forge/mypy
+  # This is a typing package, tests comprise of "do the files exist"
+  skip-lints:
+    - missing_imports_or_run_test_py
