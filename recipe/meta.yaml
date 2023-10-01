@@ -19,7 +19,7 @@ requirements:
     - python >=3.6
   run:
     - python >=3.6
-    - types-urllib3 <1.27
+    - urllib3 >=2
 
 test:
   requires:
