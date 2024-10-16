@@ -1,4 +1,4 @@
-{% set version = "2.32.0.20240914" %}
+{% set version = "2.32.0.20241016" %}
 
 package:
   name: types-requests
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/types-requests/types-requests-{{ version }}.tar.gz
-  sha256: 2850e178db3919d9bf809e434eef65ba49d0e7e33ac92d588f4a5e295fffd405
+  sha256: 0d9cad2f27515d0e3e3da7134a1b6f28fb97129d86b867f24d9c726452634d95
 
 build:
   number: 0
@@ -17,6 +17,7 @@ requirements:
   host:
     - pip
     - python >=3.8
+    - setuptools
   run:
     - python >=3.8
     - urllib3 >=2
