@@ -9,7 +9,7 @@ source:
   sha256: abd6d4f9ce3a9383f269775a9835a4c24e5cd6b9f647d64f88aa4613c33def5d
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -32,6 +32,7 @@ test:
 
 about:
   home: https://github.com/python/typeshed
+  dev_url: https://github.com/python/typeshed
   summary: Typing stubs for requests
   license: Apache-2.0 AND MIT
   license_file: LICENSE
