@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "2.32.4.20260324"
+  version: "2.33.0.20260327"
 
 package:
   name: types-requests
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/t/types-requests/types_requests-${{ version }}.tar.gz
-  sha256: 33a2a9ccb1de7d4e4da36e347622c35418f6761269014cc32857acabd5df739e
+  sha256: f4f74f0b44f059e3db420ff17bd1966e3587cdd34062fe38a23cda97868f8dd8
 
 build:
   number: 0
